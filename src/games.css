@@ -3,12 +3,22 @@
     display: flex;
     justify-content: center;
     overflow-x: hidden !important;
+    overflow-y: hidden;
+    
 }
-
+.titleBox {
+    top: 500px;
+    position: absolute;
+}
+body::-webkit-scrollbar {
+    display: none;
+    
+  
+  }
 .jumpgameBox {
     width: 1000px;
     height: 450px;
-   border: solid 2px green;
+   border-bottom: solid 4px green;
     text-align: center;
     color: white;
     
@@ -26,7 +36,7 @@
     background-color: purple
 }
 .jump{
-    animation: jump 0.3s linear;
+    animation: jump 0.45s linear;
 }
 @keyframes jump{
     0%{top: 250px;}
@@ -40,11 +50,25 @@
     top: 380px;
 background-image: url('./pictures/asteroid.png');
 background-size: 100% 100%;
-    animation: enemyPath 4s infinite linear;
-    position: absolute
+    animation: enemyPath 3s infinite linear;
+    position: absolute;
+    z-index: 3;
+}
+.fire {
+    height: 90px;
+    width: 90px;
+    top: 340px;
+background-image: url('./pictures/fire.gif');
+background-size: 100% 100%;
+    animation: enemyPath 3s infinite linear;
+    position: absolute;
+    z-index: 2;
+}
+.stop {
+    animation: none;
 }
 @keyframes enemyPath{
-    0%{left: 100vw}
+    0%{left: 2000px}
     100%{left: -20px}
 }
 .score {
