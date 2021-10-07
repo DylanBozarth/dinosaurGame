@@ -40,7 +40,7 @@
     top: 380px;
 background-image: url('./pictures/asteroid.png');
 background-size: 100% 100%;
-    animation: enemyPath 3s infinite linear;
+    animation: enemyPath 4s infinite linear;
     position: absolute
 }
 @keyframes enemyPath{
