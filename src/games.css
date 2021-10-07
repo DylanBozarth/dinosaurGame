@@ -1,0 +1,47 @@
+
+.masterDiv {
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden !important;
+}
+
+.jumpgameBox {
+    width: 1000px;
+    height: 450px;
+   border: solid 2px green;
+    text-align: center;
+    color: white;
+    
+}
+
+.player {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    top: 400px;
+    position: absolute
+}
+.powerUp {
+    background-color: purple
+}
+.jump{
+    animation: jump 0.3s linear;
+}
+@keyframes jump{
+    0%{top: 250px;}
+    30%{top: 150px;}
+    70%{top: 150px;}
+    100%{top: 250px;}
+}
+.enemy {
+    height: 50px;
+    width: 50px;
+    top: 400px;
+    background-color: red;
+    animation: enemyPath 3s infinite linear;
+    position: absolute
+}
+@keyframes enemyPath{
+    0%{left: 1500px}
+    100%{left: -20px}
+}
