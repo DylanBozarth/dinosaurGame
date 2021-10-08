@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./games.css";
 
+import { useHistory } from "react-router-dom";
 import useInterval from "react-useinterval";
 export const JumpGame = () => {
+  const history = useHistory();
   const [score, setScore] = useState(0);
   const [enemy, setEnemy] = useState({});
   const [playerClass, setPlayerClass] = useState("");
@@ -29,7 +31,8 @@ export const JumpGame = () => {
   const GameOver = () => {
     alert(`You went extinct! Your score was ${score}`);
     clearInterval(check4Death);
-    setScore(0);
+    
+    history.push('/gameover')
   };
   return (
     <div className="masterDiv">

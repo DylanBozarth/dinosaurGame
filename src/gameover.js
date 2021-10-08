@@ -3,6 +3,10 @@ import React from 'react'
 
 export const GameOver = () => {
     return (
-        <div>a</div>
+        <div className="gameOverScreen">
+<div className="deadPlayer"></div>
+
+
+        </div>
     )
 }
