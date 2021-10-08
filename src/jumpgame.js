@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import useInterval from "react-useinterval";
 export const JumpGame = () => {
   var OOF = new Audio('./oof.mp3')
+  var mario = new Audio('./Mario-jump-sound.mp3')
   const history = useHistory();
   const [score, setScore] = useState(0);
   const [enemy, setEnemy] = useState({});
