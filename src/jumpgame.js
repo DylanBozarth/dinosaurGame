@@ -4,6 +4,7 @@ import "./games.css";
 import { useHistory } from "react-router-dom";
 import useInterval from "react-useinterval";
 export const JumpGame = () => {
+  var OOF = new Audio('./oof.mp3')
   const history = useHistory();
   const [score, setScore] = useState(0);
   const [enemy, setEnemy] = useState({});
@@ -29,6 +30,7 @@ export const JumpGame = () => {
     }, 900);
   }
   const GameOver = () => {
+    OOF.play()
     alert(`You went extinct! Your score was ${score}`);
     clearInterval(check4Death);
     

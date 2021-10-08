@@ -3,9 +3,25 @@
   background-color: black;
   height: 100vh;
 }
+.gameOverScreen {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
 .deadPlayer {
   background-image: url('./pictures/deaddino.png');
   background-size: 100% 100%;
   width: 150px;
+  position: absolute;
   height: 150px;
+  margin-top: 200px;
+}
+.deadText {
+  color: white;
+  text-align: center;
+  font-size: 3vh;
+  position: absolute;
+  margin-top: 400px;
 }
