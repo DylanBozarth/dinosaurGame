@@ -3,14 +3,16 @@ import "./games.css";
 
 import { useHistory } from "react-router-dom";
 import useInterval from "react-useinterval";
-export const JumpGame = () => {
+export const JumpGame = (props) => {
   var OOF = new Audio('./oof.mp3')
   var mario = new Audio('./Mario-jump-sound.mp3')
   const history = useHistory();
   const [score, setScore] = useState(0);
   const [enemy, setEnemy] = useState({});
   const [playerClass, setPlayerClass] = useState("");
+ 
   useInterval(check4Death, 3000);
+  var epicMusic = new Audio ('./epicmusic.mp3')
   function check4Death() {
     if (playerClass !== "") {
       setScore(score + 1);
@@ -21,6 +23,7 @@ export const JumpGame = () => {
   document.addEventListener("keyup", (event) => {
     if (event.code === "Space") {
       Jump();
+      
     }
   });
 
@@ -28,13 +31,14 @@ export const JumpGame = () => {
     setPlayerClass("jump");
     setTimeout(() => {
       setPlayerClass("");
+      
     }, 900);
   }
   const GameOver = () => {
-    OOF.play()
+    props.music.pause()
     alert(`You went extinct! Your score was ${score}`);
     clearInterval(check4Death);
-    
+    OOF.play()
     history.push('/gameover')
   };
   return (
