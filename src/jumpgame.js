@@ -44,7 +44,8 @@ export const JumpGame = (props) => {
       {" "}
       
      
-      <div className="jumpgameBox"><div className="titlebox">
+      <div className="jumpgameBox">
+     <div className="titlebox">
         <h3 className="score">Don't go extinct!</h3>
         <br />
         <p className="score">Score: {score}</p>
