@@ -49,10 +49,12 @@ export const JumpGame = (props) => {
         <h3 className="score">Don't go extinct!</h3>
         <br />
         <p className="score">Score: {score}</p>
+        <h2 onClick={() => Jump()}>JUMP</h2>
       </div>
         <div className={`player ${playerClass}`} id="player"></div>
         <div style={enemy} className="enemy" id="enemy"></div><div className="fire"></div>
       </div>
+      
     </div>
   );
 };
