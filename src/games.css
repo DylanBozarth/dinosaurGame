@@ -73,6 +73,7 @@ background-size: 100% 100%;
 }
 .score {
     color: white;
+    font-size: 3.5vh;
 }
 .start {
     font-size: 4vh;

@@ -8,7 +8,7 @@ import { Start } from './start';
 
 function App() {
   var epicMusic = new Audio ('./epicmusic.mp3')
-  var Oof = new Audio ('./oof.mp3')
+  var death = new Audio ('./oof.mp3')
   var sadMusic = new Audio ('./sadmusic.mp3')
   return (
     <div className="App">
@@ -25,14 +25,14 @@ function App() {
               exact
               path="/dino"
               render={(props) => (
-                <JumpGame {...props} music={epicMusic} oof ={Oof} />
+                <JumpGame {...props} music={epicMusic} death={death} />
               )}
             />
          <Route
               exact
               path="/gameover"
               render={(props) => (
-                <GameOver {...props} music={epicMusic} sadMusic={sadMusic} oof ={Oof} />
+                <GameOver {...props} music={epicMusic} sadMusic={sadMusic} oof={death} />
               )}
             />
       </Switch>
